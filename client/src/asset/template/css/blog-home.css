@@ -1,0 +1,108 @@
+/*!
+ * Start Bootstrap - Blog Home (https://startbootstrap.com/templates/blog-home)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-home/blob/master/LICENSE)
+ */
+
+:root {
+  --mainColor: #eaeaea;
+  --secondaryColor: #fff;
+
+  --borderColor: #c1c1c1;
+
+  --mainText: black;
+  --secondaryText: #4b5156;
+
+  --themeDotBorder: #24292e;
+
+  --previewBg: rgba(251, 249, 243, 0.8);
+  --previewShadow: #f0ead6;
+
+  --postTitleText: #fff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  padding-top: 56px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
+p,
+li,
+span,
+label,
+input,
+textarea {
+  color: var(--secondaryText);
+  font-family: "Roboto Mono", monospace;
+}
+
+.home-container {
+  padding: 0;
+  margin: 0;
+}
+
+.trending-posts-section {
+  /* background-color: var(--mainColor);
+  border: 1px solid var(--borderColor); */
+}
+
+.trending-post-wrapper {
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "top-trending-post rest-trending-posts";
+}
+
+.rest-trending-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "post";
+}
+
+.post {
+  margin: 2px;
+  position: relative;
+}
+
+.post-title {
+  color: var(--postTitleText);
+  position: absolute;
+  left: 50%;
+  bottom: 8px;
+}
+
+.fresh-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "post";
+}
+
+@media screen and (max-width: 800px) {
+  .post-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "top-trending-post"
+      "rest-trending-posts";
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rest-trending-posts {
+    grid-template-columns: 1fr;
+  }
+}
